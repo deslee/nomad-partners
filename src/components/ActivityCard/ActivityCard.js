@@ -1,12 +1,9 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardActions, CardMedia, withStyles, IconButton, Button } from '@material-ui/core';
-import AddActivityIcon from '@material-ui/icons/AddCircle'
+import { Card, CardContent, Typography, CardMedia, withStyles } from '@material-ui/core';
 
 class ActivityCard extends React.Component {
-    static style = theme => ({
-        root: {
-
-        },
+    static style = () => ({
+        root: {},
         media: {
             height: '140px'
         }

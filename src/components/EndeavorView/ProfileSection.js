@@ -21,9 +21,17 @@ class Profile extends React.Component {
             profile
         } = this.props;
 
+        const profileMap = {
+            age: 'Age',
+            gender: 'Gender',
+            homeCity: 'Home City',
+            interests: 'Interests',
+            languages: 'Languages'
+        }
+
         return <div className={classes.root}>
-            {Object.keys(profile).map(profileItem => <React.Fragment key={profileItem}>
-                <Typography className={classes.title}>{profileItem}</Typography>
+            {Object.keys(profile).filter(key => profileMap[key]).map(profileItem => <React.Fragment key={profileItem}>
+                <Typography className={classes.title}>{profileMap[profileItem]}</Typography>
                 {profile[profileItem] && typeof (profile[profileItem]) === 'object' && profile[profileItem].length ?
                     <ul>
                         {profile[profileItem].map(text => <li key={text}><Typography className={classes.text}>{text}</Typography></li>)}

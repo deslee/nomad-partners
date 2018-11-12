@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { withStyles, Grid, Paper, Avatar, Button } from '@material-ui/core';
+import { withStyles, Grid, Avatar, Button } from '@material-ui/core';
 import { colors } from '../../App';
 import ConnectIcon from '@material-ui/icons/PersonAdd'
 import IdentityVerifiedIcon from '@material-ui/icons/CheckCircle'
@@ -114,7 +114,7 @@ const EndeavorView = ({ endeavor: {
             </Grid>
             <Grid className={classes.generalInfoItem} item xs={4}>
                 <Typography color="textSecondary" variant="overline">About {profile.firstName}</Typography>
-                <Avatar alt="Remy Sharp" src="https://a0.muscache.com/im/pictures/user/ff211dbb-ff68-4ed0-82eb-5dcde1073bb3.jpg?aki_policy=profile_x_medium" className={classes.avatar} />
+                <Avatar alt={profile.fullName} src={profile.avatarUrl} className={classes.avatar} />
                 {
                     verified && <div className={classes.identityVerifiedIndication}>
                         <div className={classes.identityVerifiedIcon}><IdentityVerifiedIcon /></div>
